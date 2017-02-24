@@ -1,0 +1,65 @@
+CREATE DATABASE IF NOT EXISTS Vote_poll;
+USE Vote_poll;
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `id_members` int(50) NOT NULL,
+  `id_parties` int(50) NOT NULL,
+  `member` varchar(30) NOT NULL,
+  `leader` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `members`
+  ADD PRIMARY KEY (`id_members`);
+  
+ALTER TABLE `members`
+  MODIFY `id_members` int(50) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `members` (`id_parties`, `member`, `leader`) VALUES
+(1, 'Stephen King', 1),
+(1, 'Mike Pritchard', 0),
+(2, 'Steve Duncan', 0),
+(2, 'Dude that likes to lead', 1),
+(3, 'Adam Jensen', 1),
+(3, 'John Sheppard', 0),
+(4, 'Douglas Adams', 0),
+(4, 'Marvin', 1),
+(5, 'Lara Croft?', 0),
+(5, 'Gargamel', 1);
+
+  
+  CREATE TABLE IF NOT EXISTS `parties` (
+  `id_parties` int(11) NOT NULL,
+  `party` varchar(30) NOT NULL,
+  `votes` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `parties`
+  ADD PRIMARY KEY (`id_parties`);
+
+ALTER TABLE `parties`
+  MODIFY `id_parties` int(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `parties` (`id_parties`, `party`, `votes`) VALUES
+(1, 'The liberals', 1250),
+(2, 'Random conservative party', 1000),
+(3, 'Radicals!!', 204),
+(4, 'Full of populists', 3000),
+(5, 'The revolution comes', 500);
+
+CREATE TABLE `user_login` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `user_password` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT INTO `user_login` (`id`, `user_name`, `user_email`, `user_password`) VALUES
+(1, 'admin', 'admin@admin.admin', 'admin'),
+(2, 'Random', 'random@random.random', 'Random'),
+(3, 'user', 'user@user.user', 'user');
+
+ALTER TABLE `user_login`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user_login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
