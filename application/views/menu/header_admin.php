@@ -17,6 +17,6 @@
 	<li><a href="<?php echo site_url('party_admin/delete_parties');?>">Delete a party</a></li>
 	<li><a href="<?php echo site_url('party_admin/update_parties');?>">Update parties</a></li>
 	<li><a href="<?php echo site_url('party_admin/vote');?>">VOTE!</a></li>
-	<li><a href="<?=base_url('./application/Oboril.pdf')?>" target="_blank">Show My Pdf</a></li>
+	<li><a href="<?=base_url('./The vote poll application.docx')?>" target="_blank">Show My Pdf</a></li>
 </ul>
 
