@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1',
-	'username' => 'root',
-	'password' => 'test',
-	'database' => 'Vote_poll',
+	'hostname' => '=mysli.oamk.fi',
+	'username' => 't7obda00',
+	'password' => 'dHpC2MXxTUy4obSn',
+	'database' => 'opisk_t7obda00',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
