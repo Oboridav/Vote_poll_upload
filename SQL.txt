@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS Vote_poll;
 USE Vote_poll;
-
+//a
 CREATE TABLE IF NOT EXISTS `members` (
   `id_members` int(50) NOT NULL,
   `id_parties` int(50) NOT NULL,
