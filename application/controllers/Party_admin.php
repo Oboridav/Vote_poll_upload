@@ -112,9 +112,9 @@ class party_admin extends CI_Controller {
 	public function vote() {
 		$this->load->helper('url');
 		$this->load->model('party_model');
+		
 		$data['parties']=$this->party_model->getparties();
 		$data['page']='party/add_vote_admin';
-		$data['page']='party/show_parties';
 
 		$this->load->view('menu/content_admin',$data);
 	
