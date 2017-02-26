@@ -93,10 +93,6 @@ class party_admin extends CI_Controller {
 			$id_parties=$this->input->post('id');
 			//calculate rows
 			$rows=0;
-			foreach ($id_parties as $a) {
-				$rows++;
-				echo($rows);
-			}
 			//update database row by row
 			for($x=0; $x < $rows; $x++ ){
 				$update_data=array(
