@@ -114,8 +114,33 @@ class party_admin extends CI_Controller {
 		$this->load->model('party_model');
 		$data['parties']=$this->party_model->getparties();
 		$data['page']='party/add_vote_admin';
-		$chart->render("libchart/demo/generated/demo3.png");	
+		$data['page']='party/show_parties';
+
 		$this->load->view('menu/content_admin',$data);
+	
+		$i=0;
+		//calculate rows
+			$rows=0;
+			foreach ($data['parties'] as $a) {
+				$rows++;
+			}
+			// create data for chart
+				foreach ($data['parties'] as $a) 
+				{
+				$points[$i]=new Point($a['party'],$a['votes']);
+				$i++;
+				}
+			// create pie chart										
+		$chart = new PieChart();
+		
+    if ($rows==0){$points[0]=new Point( 0,0);}
+    $dataSet = new XYDataSet();
+    // use data 
+    foreach ($points as $point) $dataSet->addPoint($point);
+    $chart->setDataSet($dataSet);
+    $chart->setTitle("Parties");
+	// pie chart will be save in this location
+	 $chart->render("libchart/demo/generated/demo3.png");	
 	}
 	
 public function add_vote($chosen_id){
