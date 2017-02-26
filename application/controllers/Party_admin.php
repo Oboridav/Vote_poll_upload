@@ -114,6 +114,7 @@ class party_admin extends CI_Controller {
 		$this->load->model('party_model');
 		$data['parties']=$this->party_model->getparties();
 		$data['page']='party/add_vote_admin';
+		$chart->render("libchart/demo/generated/demo3.png");	
 		$this->load->view('menu/content_admin',$data);
 	}
 	
