@@ -2,7 +2,7 @@
 <?php
 if (isset($this->session->userdata['logged_in'])) {
 
-header("location: http://localhost/ci_monday-master/");
+header("location: http://193.167.100.74/~t7obda00/Vote_poll_upload");
 }
 ?>
 <head>
