@@ -2,5 +2,5 @@
 </body>
 
 <p>David Oboril</p>
-<b id="logout"><a href="http://localhost/ci_monday-master/">Logout</a></b>
+<b id="logout"><a href="http://193.167.100.74/~t7obda00/Vote_poll_upload">Logout</a></b>
 </html>
